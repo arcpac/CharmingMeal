@@ -1,10 +1,35 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Button,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { MEALS } from "../data/dummy-data";
 import MealDetailOverview from "../components/MealDetailOverview";
+import { useLayoutEffect } from "react";
+import IconButton from "../components/IconButton";
 
-function MealDetails({ route }) {
+function MealDetails({ route, navigation }) {
   const mealID = route.params.mealID;
   const selectedMeal = MEALS.find((meal) => meal.id === mealID);
+
+  function headerButtoHandler() {
+    console.log("pressed!!");
+  }
+
+  useLayoutEffect(() => {
+    const icon = "staro";
+    const color = "black";
+    navigation.setOptions({
+      headerRight: () => {
+        return (
+          <IconButton icon={icon} color={color} onPress={headerButtoHandler} />
+        );
+      },
+    });
+  }, [navigation, headerButtoHandler]);
 
   return (
     <ScrollView style={styles.container}>
@@ -41,7 +66,7 @@ export default MealDetails;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
+    padding: 10,
     marginBottom: 32,
     borderBottomEndRadius: 30,
     borderBottomStartRadius: 30,

@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import CategoryScreen from "./screens/CategoryScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -16,7 +16,6 @@ export default function App() {
         <Stack.Navigator
           screenOptions={{
             cardStyle: { backgroundColor: "#f5f5f5" },
-            // headerStyle: { backgroundColor: "#3f2f25" },
           }}
         >
           <Stack.Screen
@@ -31,7 +30,6 @@ export default function App() {
             component={MealsOverviewScreen}
             options={({ route, navigation }) => {
               const categoryID = route.params.title;
-              console.log(route.params);
               return {
                 title: categoryID,
               };

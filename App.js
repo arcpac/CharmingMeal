@@ -1,6 +1,6 @@
 // import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
-
+import { Provider } from "react-redux";
 import { Button, StyleSheet, Text, View } from "react-native";
 import CategoryScreen from "./screens/CategoryScreen";
 import { NavigationContainer } from "@react-navigation/native";
@@ -12,6 +12,7 @@ import FavoriteScreen from "./screens/FavoriteScreen";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import { FAVORITES } from "./data/dummy-data";
 import FavoriteContextProvider from "./store/context/favorites-context";
+import { store } from "./store/redux/store";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -51,7 +52,8 @@ export default function App() {
   return (
     <>
       <StatusBar style="dark" />
-      <FavoriteContextProvider>
+      {/* <FavoriteContextProvider> */}
+      <Provider store={store}>
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={{
@@ -82,7 +84,8 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
-      </FavoriteContextProvider>
+        {/* </FavoriteContextProvider> */}
+      </Provider>
     </>
   );
 }

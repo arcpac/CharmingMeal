@@ -1,0 +1,54 @@
+Date : 2023-07-01 21:58:50
+Directory : /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject
+Total : 21 files,  25516 codes, 19 comments, 78 blanks, all 25613 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          3 |     24,617 |         16 |          2 |     24,635 |
+| JavaScript |         17 |        898 |          3 |         75 |        976 |
+| Markdown   |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                   | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                      |         21 |     25,516 |         19 |         78 |     25,613 |
+| . (Files)                                                                                              |          6 |     24,719 |         17 |          9 |     24,745 |
+| components                                                                                             |          6 |        232 |          1 |         24 |        257 |
+| data                                                                                                   |          1 |        329 |          0 |         12 |        341 |
+| models                                                                                                 |          3 |         47 |          0 |          5 |         52 |
+| screens                                                                                                |          4 |        161 |          1 |         23 |        185 |
+| store                                                                                                  |          1 |         28 |          0 |          5 |         33 |
+| store/context                                                                                          |          1 |         28 |          0 |          5 |         33 |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                               | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/App.js                             | JavaScript |         92 |          1 |          5 |         98 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/README.md                          | Markdown   |          1 |          0 |          1 |          2 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/app.json                           | JSON       |         16 |         16 |          0 |         32 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/babel.config.js                    | JavaScript |          9 |          0 |          1 |         10 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/components/CategoryTile.js         | JavaScript |         51 |          1 |          4 |         56 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/components/IconButton.js           | JavaScript |         25 |          0 |          3 |         28 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/components/MealDetailOverview.js   | JavaScript |         27 |          0 |          3 |         30 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/components/MealItem.js             | JavaScript |         75 |          0 |          7 |         82 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/components/MealList.js             | JavaScript |         32 |          0 |          4 |         36 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/components/NoAvailable.js          | JavaScript |         22 |          0 |          3 |         25 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/data/dummy-data.js                 | JavaScript |        329 |          0 |         12 |        341 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/models/category.js                 | JavaScript |          8 |          0 |          2 |         10 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/models/favorite.js                 | JavaScript |          7 |          0 |          1 |          8 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/models/meal.js                     | JavaScript |         32 |          0 |          2 |         34 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/package-lock.json                  | JSON       |     24,573 |          0 |          1 |     24,574 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/package.json                       | JSON       |         28 |          0 |          1 |         29 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/screens/CategoryScreen.js          | JavaScript |         28 |          0 |          4 |         32 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/screens/FavoriteScreen.js          | JavaScript |         17 |          0 |          5 |         22 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/screens/MealDetails.js             | JavaScript |         95 |          1 |          8 |        104 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/screens/MealsOverviewScreen.js     | JavaScript |         21 |          0 |          6 |         27 |
+| /Users/antoniocaballes/Docs/Udemy/React Native Maxi/CharmingProject/store/context/favorites-context.js | JavaScript |         28 |          0 |          5 |         33 |
+| Total                                                                                                  |            |     25,516 |         19 |         78 |     25,613 |
++--------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

@@ -6,30 +6,42 @@ import {
   Text,
   View,
 } from "react-native";
-import { MEALS } from "../data/dummy-data";
+import { FAVORITE, FAVORITES, MEALS } from "../data/dummy-data";
 import MealDetailOverview from "../components/MealDetailOverview";
-import { useLayoutEffect } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 import IconButton from "../components/IconButton";
+import { FavoritesContext } from "../store/context/favorites-context";
 
 function MealDetails({ route, navigation }) {
   const mealID = route.params.mealID;
   const selectedMeal = MEALS.find((meal) => meal.id === mealID);
 
-  function headerButtoHandler() {
-    console.log("pressed!!");
+  const favoriteMealCtx = useContext(FavoritesContext);
+  console.log(favoriteMealCtx);
+  const mealIsFavorite = favoriteMealCtx.ids.includes(mealID);
+
+  function favoriteMealHandler() {
+    if (mealIsFavorite) {
+      favoriteMealCtx.removeFavorite(mealID);
+    } else {
+      favoriteMealCtx.addFavorite(mealID);
+    }
   }
 
   useLayoutEffect(() => {
-    const icon = "staro";
     const color = "black";
     navigation.setOptions({
       headerRight: () => {
         return (
-          <IconButton icon={icon} color={color} onPress={headerButtoHandler} />
+          <IconButton
+            icon={mealIsFavorite ? "star" : "staro"}
+            color={color}
+            onPress={favoriteMealHandler}
+          />
         );
       },
     });
-  }, [navigation, headerButtoHandler]);
+  }, [navigation, favoriteMealHandler]);
 
   return (
     <ScrollView style={styles.container}>
@@ -44,16 +56,19 @@ function MealDetails({ route, navigation }) {
         <View style={styles.subtitle}>
           <Text style={{ fontWeight: "bold" }}>Ingredients</Text>
         </View>
-        {selectedMeal.ingredients.map((ingredient) => (
-          <Text key={ingredient} style={{ margin: 15 }}>
-            {ingredient}
-          </Text>
-        ))}
+        <View>
+          {selectedMeal.ingredients.map((ingredient) => (
+            <Text key={ingredient} style={styles.list}>
+              {ingredient}
+            </Text>
+          ))}
+        </View>
+
         <View style={styles.subtitle}>
           <Text style={{ fontWeight: "bold" }}>Steps</Text>
         </View>
         {selectedMeal.steps.map((step) => (
-          <Text key={step} style={{ margin: 15 }}>
+          <Text key={step} style={styles.list}>
             {step}
           </Text>
         ))}
@@ -87,5 +102,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     padding: 16,
     // backgroundColor: "#bcbcbc",
+  },
+  list: {
+    margin: 10,
   },
 });

@@ -11,20 +11,26 @@ import MealDetailOverview from "../components/MealDetailOverview";
 import { useContext, useLayoutEffect, useState } from "react";
 import IconButton from "../components/IconButton";
 import { FavoritesContext } from "../store/context/favorites-context";
+import { useSelector, useDispatch } from "react-redux";
+import { addFavorite, removeFavorite } from "../store/redux/favorites";
 
 function MealDetails({ route, navigation }) {
+  // const favoriteMealCtx = useContext(FavoritesContext);
   const mealID = route.params.mealID;
   const selectedMeal = MEALS.find((meal) => meal.id === mealID);
+  const favoriteMealsIds = useSelector((state) => state.favoriteMeals.ids);
 
-  const favoriteMealCtx = useContext(FavoritesContext);
-  console.log(favoriteMealCtx);
-  const mealIsFavorite = favoriteMealCtx.ids.includes(mealID);
+  const dispatch = useDispatch();
 
+  const mealIsFavorite = favoriteMealsIds.includes(mealID);
+  console.log(mealIsFavorite);
   function favoriteMealHandler() {
     if (mealIsFavorite) {
-      favoriteMealCtx.removeFavorite(mealID);
+      dispatch(removeFavorite({ id: mealID }));
+      // favoriteMealCtx.removeFavorite(mealID);
     } else {
-      favoriteMealCtx.addFavorite(mealID);
+      dispatch(addFavorite({ id: mealID }));
+      // favoriteMealCtx.addFavorite(mealID);
     }
   }
 
